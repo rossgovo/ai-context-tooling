@@ -15,18 +15,29 @@ This script prints the contents of files from a specified directory or a list of
 
 ## Usage
 
+## Bash Alias
+
+```
+alias context_printer='python /path/to/context_printer.py'
+```
+
 ### Running the Script
 
 1. **For a directory** (optionally recursive):
     ```sh
-    python context_printer.py --directory /path/to/directory --recursive
+    context_printer --directory /path/to/directory --recursive
     ```
 
 2. **For specific files**:
     ```sh
-    python context_printer.py --files /path/to/file1 /path/to/file2
+    context_printer --files /path/to/file1 /path/to/file2
     ```
 
+3. **Copy output directly to clipboard**
+    ```sh
+    context_printer --files /path/to/file1 /path/to/file2 | pbcopy
+    ```
+    
 ### Command Line Arguments
 
 - `--directory`: Path to the directory containing files.
@@ -50,10 +61,4 @@ Contents: (contents of file2)
 
 - The script will skip files larger than 1MB.
 - Ensure the script has the necessary permissions to read the files and directories specified.
-
-## Bash Alias
-
-```
-alias context_printer='python /path/to/context_printer.py'
-```
 

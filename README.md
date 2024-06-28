@@ -28,6 +28,11 @@ alias context_printer='python /path/to/context_printer.py'
     context_printer --directory /path/to/directory --recursive
     ```
 
+2. **Ignore a subdirectory**
+    ```sh
+    context_printer --directory /path/to/project --recursive --ignore ".terraform" ".git"
+    ```
+
 2. **For specific files**:
     ```sh
     context_printer --files /path/to/file1 /path/to/file2
@@ -43,6 +48,7 @@ alias context_printer='python /path/to/context_printer.py'
 - `--directory`: Path to the directory containing files.
 - `--files`: List of individual file paths.
 - `--recursive`: (Optional) Recursively include files from subdirectories when a directory is specified.
+- `--ignore`: (Optional) Ignore files or directories matching this pattern.
 
 ### Example Outputs
 

@@ -15,7 +15,7 @@ This script prints the contents of files from a specified directory or a list of
 
 ## Usage
 
-## Bash Alias
+### Bash Alias
 
 ```
 alias context_printer='python /path/to/context_printer.py'
